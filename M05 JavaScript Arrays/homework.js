@@ -144,18 +144,46 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
+   let meses = [];
+   array.map(aChequear(x));
+   function aChequear(elemt){
+   switch(elemt){
+      case "Enero":
+         meses.push(elemt);
+      case "Marzo":
+         meses.push(elemt);
+      case "Noviembre":
+         meses.push(elemt);
+         
+      }
+   }
+   if (meses.length==2){
+      return meses
+   }else {
+      return "No se encontraron los meses pedidos"
+   }
 }
 
 function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
+   let tabla = [];
+   
+   for (let i = 1; i<=10;i++){
+      console.log(i*6);
+      tabla.push(i*6)   
+   }
+   return tabla
 }
 
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
+   let mayores = [];
+   array.map(x=>x>=100?mayores.push(x):null);
+   return mayores
 }
 
 /* ----------------------------------------------------------------------------------
@@ -169,6 +197,16 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+   let aumento = [];
+   for (let l = 1; l<= 10; l++ ){
+      if(l==num){
+         return "Se interrumpio la ejecuccion"
+      }
+      num+=2;
+      aumento.push(num);
+      
+   }
+   return aumento
 }
 
 function continueStatement(num) {
@@ -178,6 +216,14 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+   let aumentos = [];
+   for (let l = 1; l<= 10; l++ ){
+      if(l!=5){
+         num+=2;
+         aumento.push(num);
+      }
+   }
+   return aumento
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
