@@ -14,7 +14,10 @@ function numberOfCharacters(string) {
    // Las letras deben estar en orden alfabético.
    // [EJEMPLO]: "adsjfdsfsfjsdjfhacabcsbajda" ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 }
    // Tu código:
-}
+   let obje = {};
+   let arr = string.split("");
+   arr.map(x =>obje.hasOwnProperty([x])?obje[x]++:obje[x]=1);
+   return obje
 
 function capToFront(string) {
    // Recibes un string con algunas letras en mayúscula y otras en minúscula.
@@ -29,18 +32,42 @@ function asAmirror(frase) {
    // La diferencia es que cada palabra estará escrita al inverso.
    // [EJEMPLO]: "The Henry Challenge is close!"  ---> "ehT yrneH egnellahC si !esolc"
    // Tu código:
+   let laFrase = "";
+   let principio = 0
+   let pos;
+   do{
+      for (let j = principio + 1 ;frase[j]!=" " && j != frase.length;j++){}
+      pos = j;
+      do{
+         frase[principio]=frase[j];
+         j--;
+         principio++;
+      }while(principio!=pos);
+
+   }while(pos!=frase.length);
+   
 }
+
 
 function capicua(numero) {
    // Si el número que recibes es capicúa debes retornar el string: "Es capicua".
    // Caso contrario: "No es capicua".
    // Tu código:
+   // if (numero%2!=0){
+      
+   //    for(let i = 0; i)
+   // }
 }
 
 function deleteAbc(string) {
    // Tu tarea es eliminar las letras "a", "b" y "c" del string recibido.
    // Retorna el string sin estas letras.
    // Tu código:
+   string.replace("a","");
+   string.replace("b","");
+   string.replace("c","");
+   return string
+
 }
 
 function sortArray(arrayOfStrings) {
@@ -71,3 +98,4 @@ module.exports = {
    sortArray,
    buscoInterseccion,
 };
+}
