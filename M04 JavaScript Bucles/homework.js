@@ -104,9 +104,16 @@ function fizzBuzz(num) {
    // Si "num" es divisible entre 3 y 5 (ambos), retorna "fizzbuzz".
    // De lo contrario, retorna false.
    // Tu código:
-   if (!(num%3))return "fizz";
+   if (!(num%3)){
+      if(!(num%5)){
+         return "fizzbuzz"
+      }else{
+      return "fizz"
+      }
+   } 
+   
    if (!(num%5))return "buzz";
-   if (!(num%3) && !(num%5))return "fizzbuzz";
+   
    return false
 }
 
@@ -140,52 +147,33 @@ function esPrimo(num) {
    // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
-<<<<<<< HEAD
-   if (num>=2){
-      for (let i = 2; i < num;i++){
-         if (num%i==0){ 
-            return false
-            }
-         }
-      }else {
-         return false
-      }
-      return true
-      
-      
-   }
-
-=======
    if (num>1){
-      for (let i = 0; i<num;i++){
+      for (let i = 2; i<num;i++){
          if (num%i==0){
             return false
          }
       }
       return true
-   }
-   return false
+   } else {
+   return false}
+
 }  
->>>>>>> 5326b5827222fd1a4f137c20971e38ecf6982d5b
 
 function esVerdadero(valor) {
    // Si "valor" es verdadero retornar "Soy verdadero".
    // Caso contrario, retornar "Soy falso".
    // Tu código:
-<<<<<<< HEAD
-   switch (valor){
-      case 
-
-   }
-=======
    return valor?"Soy verdadero":"Soy falso"
->>>>>>> 5326b5827222fd1a4f137c20971e38ecf6982d5b
 }
 
 function tieneTresDigitos(num) {
    // Si el número recibido tiene tres dígitos retornar true.
    // Caso contrario, retornar false.
    // Tu código:
+      if (num>=100 && num<=999){
+         return true
+      }
+      return false
 }
 
 function doWhile(num) {
