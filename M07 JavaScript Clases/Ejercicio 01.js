@@ -11,23 +11,29 @@ function crearUsuario() {
    // Retornar la clase.
    // Tu código:
    class Usuario {
-
-      constructor(usuario, nombre, email){
+      
+      constructor(usuario, nombre, email,password){
          this.usuario=usuario;
          this.nombre=nombre;
          this.email=email;
+         this.password=password;
       }
       saludar(){
-         console.log("Hola, mi nombre es " + this.nombre)
+         console.log("Hola, mi nombre es " + this.nombre);
       }
+
    }
+   return Usuario
+
+   
 }
 
 function agregarMetodoPrototype(Usuario) {
    // Agrega un método al prototipo de "Usuario".
    // El método debe llamarse "saludar" y debe devolver el string "Hello World!".
    // Tu código:
-   Object.prototype.saludar = function(){console.log("Hello World!");}
+   Object.prototype.saludar = function(){return "Hello World!"};
+   return Usuario.saludar()
 }
 
 function agregarStringInvertida() {
